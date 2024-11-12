@@ -19,14 +19,34 @@
  */
 public class GenomeCompressor {
 
+    private static final char A = 0, C =1, T =2, G = 3;
+    private static int BITS_PER_CHAR = 2;
+
     /**
      * Reads a sequence of 8-bit extended ASCII characters over the alphabet
      * { A, C, T, G } from standard input; compresses and writes the results to standard output.
      */
     public static void compress() {
 
-        // TODO: complete the compress() method
-
+        String s = BinaryStdIn.readString();
+        int n = s.length();
+        // Write out each character
+        for (int i = 0; i < n; i++) {
+           switch (s.charAt(i)) {
+               case 'A':
+                   BinaryStdOut.write(A, BITS_PER_CHAR);
+                   break;
+               case 'C':
+                   BinaryStdOut.write(C, BITS_PER_CHAR);
+                   break;
+               case 'T':
+                   BinaryStdOut.write(T, BITS_PER_CHAR);
+                   break;
+               case 'G':
+                   BinaryStdOut.write(G, BITS_PER_CHAR);
+                   break;
+            }
+        }
         BinaryStdOut.close();
     }
 
@@ -35,7 +55,25 @@ public class GenomeCompressor {
      */
     public static void expand() {
 
-        // TODO: complete the expand() method
+        while (!BinaryStdIn.isEmpty()) {
+            int c = BinaryStdIn.readChar(BITS_PER_CHAR);
+            switch (c) {
+                case A:
+                    BinaryStdOut.write('A');
+                    break;
+                case C:
+                    BinaryStdOut.write('C');
+                    break;
+                case T:
+                    BinaryStdOut.write('T');
+                    break;
+                case G:
+                    BinaryStdOut.write('G');
+                    break;
+                default:
+                    System.out.println("Something is wrong");
+            }
+        }
 
         BinaryStdOut.close();
     }
