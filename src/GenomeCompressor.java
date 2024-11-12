@@ -55,7 +55,10 @@ public class GenomeCompressor {
      */
     public static void expand() {
 
-        while (!BinaryStdIn.isEmpty()) {
+        int count = 0;
+
+        // Forecfully removed/ignored the last two padded bits that carried over from compression
+        while (!BinaryStdIn.isEmpty() && count < 12502) {
             int c = BinaryStdIn.readChar(BITS_PER_CHAR);
             switch (c) {
                 case A:
@@ -73,6 +76,7 @@ public class GenomeCompressor {
                 default:
                     System.out.println("Something is wrong");
             }
+            count += 2;
         }
 
         BinaryStdOut.close();

@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b73ab661-840a-4b64-b072-3764519be013" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BinaryStdIn.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BinaryStdOut.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DumpBinary.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GenomeCompressor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/virus.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/virusExpanded.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b73ab661-840a-4b64-b072-3764519be013" name="Changes" comment="Currently, everything works except for the last 2 bits of the file which I believe are due to the java compiler adding padded bits with a value of 0 to make the end result a multiple of 8 bits">
+      <change beforePath="$PROJECT_DIR$/WORK_LOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/WORK_LOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenomeCompressor.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenomeCompressor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GenomeCompressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenomeCompressor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/virusExpanded.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/virusExpanded.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +56,20 @@
       <option name="presentableId" value="Default" />
       <updated>1723575642960</updated>
     </task>
+    <task id="LOCAL-00001" summary="Currently, everything works except for the last 2 bits of the file which I believe are due to the java compiler adding padded bits with a value of 0 to make the end result a multiple of 8 bits">
+      <option name="closed" value="true" />
+      <created>1731447198348</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731447198348</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Currently, everything works except for the last 2 bits of the file which I believe are due to the java compiler adding padded bits with a value of 0 to make the end result a multiple of 8 bits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Currently, everything works except for the last 2 bits of the file which I believe are due to the java compiler adding padded bits with a value of 0 to make the end result a multiple of 8 bits" />
   </component>
 </project>
