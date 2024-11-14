@@ -21,6 +21,7 @@ public class GenomeCompressor {
 
     private static final char A = 0, C =1, T =2, G = 3;
     private static int BITS_PER_CHAR = 2;
+    private static int count = 0;
 
     /**
      * Reads a sequence of 8-bit extended ASCII characters over the alphabet
@@ -46,6 +47,7 @@ public class GenomeCompressor {
                    BinaryStdOut.write(G, BITS_PER_CHAR);
                    break;
             }
+            count++;
         }
         BinaryStdOut.close();
     }
@@ -55,10 +57,10 @@ public class GenomeCompressor {
      */
     public static void expand() {
 
-        int count = 0;
+        int temp = 0;
 
         // Forecfully removed/ignored the last two padded bits that carried over from compression
-        while (!BinaryStdIn.isEmpty() && count < 12502) {
+        while (!BinaryStdIn.isEmpty() && temp < 12502) {
             int c = BinaryStdIn.readChar(BITS_PER_CHAR);
             switch (c) {
                 case A:
@@ -76,7 +78,7 @@ public class GenomeCompressor {
                 default:
                     System.out.println("Something is wrong");
             }
-            count += 2;
+            temp += 2;
         }
 
         BinaryStdOut.close();
