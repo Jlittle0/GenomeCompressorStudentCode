@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b73ab661-840a-4b64-b072-3764519be013" name="Changes" comment="First Submit">
-      <change afterPath="$PROJECT_DIR$/src/TestingSpace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b73ab661-840a-4b64-b072-3764519be013" name="Changes" comment="Commit after class">
       <change beforePath="$PROJECT_DIR$/src/GenomeCompressor.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenomeCompressor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GenomeCompressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenomeCompressor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/virus.bin" beforeDir="false" afterPath="$PROJECT_DIR$/src/virus.bin" afterDir="false" />
@@ -103,7 +101,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731600682312</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit after class">
+      <option name="closed" value="true" />
+      <created>1731631206590</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731631206590</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +128,7 @@
     <MESSAGE value="Currently, everything works except for the last 2 bits of the file which I believe are due to the java compiler adding padded bits with a value of 0 to make the end result a multiple of 8 bits" />
     <MESSAGE value="Now works, forcefully told program to remove the last couple bits." />
     <MESSAGE value="First Submit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Submit" />
+    <MESSAGE value="Commit after class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit after class" />
   </component>
 </project>

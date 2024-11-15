@@ -32,9 +32,7 @@ public class GenomeCompressor {
 
         String s = BinaryStdIn.readString();
         int n = s.length();
-        String fileSize = createBinaryString(n);
-        for (int i = 0; i < fileSize.length(); i++)
-            BinaryStdOut.write((int)fileSize.charAt(i) - 48);
+        BinaryStdOut.write(n);
         // Write out each character
         for (int i = 0; i < n; i++) {
            switch (s.charAt(i)) {
@@ -66,15 +64,11 @@ public class GenomeCompressor {
         // Forecfully removed/ignored the last two padded bits that carried over from compression
 
         String header = "";
-        for (int i = 0; i < HEADER_SIZE; i++) {
-            char num = BinaryStdIn.readChar(1);
-            header += num;
-        }
+        int metaLength = BinaryStdIn.readInt();
 
-        int headerSequence = Integer.parseInt(header, 2);
 
         // Swap to a for loop with the starting amount being header_size I guess
-        while (!BinaryStdIn.isEmpty() && temp < headerSequence + HEADER_SIZE) {
+        while (!BinaryStdIn.isEmpty() && temp < metaLength) {
             int c = BinaryStdIn.readChar(BITS_PER_CHAR);
             switch (c) {
                 case A:
@@ -92,7 +86,7 @@ public class GenomeCompressor {
                 default:
                     System.out.println("Something is wrong");
             }
-            temp += 2;
+            temp++;
         }
 
         BinaryStdOut.close();
