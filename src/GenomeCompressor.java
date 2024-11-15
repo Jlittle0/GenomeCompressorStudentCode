@@ -21,6 +21,7 @@ public class GenomeCompressor {
 
     private static final char A = 0, C =1, T =2, G = 3;
     private static int BITS_PER_CHAR = 2;
+    private static final int HEADER_SIZE = 32;
     private static int count = 0;
 
     /**
@@ -31,6 +32,9 @@ public class GenomeCompressor {
 
         String s = BinaryStdIn.readString();
         int n = s.length();
+        String fileSize = createBinaryString(n);
+        for (int i = 0; i < fileSize.length(); i++)
+            BinaryStdOut.write((int)fileSize.charAt(i) - 48);
         // Write out each character
         for (int i = 0; i < n; i++) {
            switch (s.charAt(i)) {
@@ -60,7 +64,17 @@ public class GenomeCompressor {
         int temp = 0;
 
         // Forecfully removed/ignored the last two padded bits that carried over from compression
-        while (!BinaryStdIn.isEmpty() && temp < 12502) {
+
+        String header = "";
+        for (int i = 0; i < HEADER_SIZE; i++) {
+            char num = BinaryStdIn.readChar(1);
+            header += num;
+        }
+
+        int headerSequence = Integer.parseInt(header, 2);
+
+        // Swap to a for loop with the starting amount being header_size I guess
+        while (!BinaryStdIn.isEmpty() && temp < headerSequence + HEADER_SIZE) {
             int c = BinaryStdIn.readChar(BITS_PER_CHAR);
             switch (c) {
                 case A:
@@ -82,6 +96,18 @@ public class GenomeCompressor {
         }
 
         BinaryStdOut.close();
+    }
+
+    public static String createBinaryString(int n) {
+        String num = Integer.toBinaryString(n);
+        String result = "";
+        for (int i = 0; i < HEADER_SIZE; i++) {
+            if (i < HEADER_SIZE - num.length())
+                result += "0";
+            else
+                result += num.charAt(i - 32 + num.length());
+        }
+        return result;
     }
 
 

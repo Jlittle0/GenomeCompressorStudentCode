@@ -4,16 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b73ab661-840a-4b64-b072-3764519be013" name="Changes" comment="Now works, forcefully told program to remove the last couple bits.">
+    <list default="true" id="b73ab661-840a-4b64-b072-3764519be013" name="Changes" comment="First Submit">
+      <change afterPath="$PROJECT_DIR$/src/TestingSpace.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GenomeCompressor.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenomeCompressor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GenomeCompressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenomeCompressor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/virus.bin" beforeDir="false" afterPath="$PROJECT_DIR$/src/virus.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/virusExpanded.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/virusExpanded.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,6 +56,20 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="TestingSpace" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestingSpace" />
+      <module name="Genome Compressor Student Code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestingSpace" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,13 +95,33 @@
       <option name="project" value="LOCAL" />
       <updated>1731447752670</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="First Submit">
+      <option name="closed" value="true" />
+      <created>1731600682312</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731600682312</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Currently, everything works except for the last 2 bits of the file which I believe are due to the java compiler adding padded bits with a value of 0 to make the end result a multiple of 8 bits" />
     <MESSAGE value="Now works, forcefully told program to remove the last couple bits." />
-    <option name="LAST_COMMIT_MESSAGE" value="Now works, forcefully told program to remove the last couple bits." />
+    <MESSAGE value="First Submit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Submit" />
   </component>
 </project>
